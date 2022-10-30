@@ -48,12 +48,6 @@ class Generate_pwd_dict(object):
                 with open(f"./pwds/{self._domain_dict}.txt", "a+") as f:
                     for tp in temp_pwd_list:
                         f.write(f"{tp}\n")
-
-
-
-
-
-# temp = list(exrex.generate("s[!@#$]{1,2}word\d"))
-# print(temp)
-
-# print(domains)
+                        
+                        
+  
