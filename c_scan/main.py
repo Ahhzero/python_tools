@@ -15,13 +15,10 @@ if __name__ == '__main__':
     parser.add_option("-i", "--ipc", dest="ipc", help=" eg:-i 192.168.1.0/24  Please enter the IP address block to query")
     parser.add_option("-t", "--threads", dest="threads",default=10,help=" threads, the default value is recommended. If you want to change -t plus the number of threads")
     (options, args) = parser.parse_args()
-    # print(options.ipc)
-    # print(options.threads)
     if options.ipc is None:
         parser.print_help()
         print("EEROR: The parameter cannot be empty!")
     else:
-        # scan = Generate_pwd_dict(options.ipc)
         scan = C_scan(options.ipc,int(options.threads))
         scan.start()
         print("The build succeeded！Check out the pwd folder!")
